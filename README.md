@@ -2,11 +2,12 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2024 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2024 session called DT180 - Integrating SAP S/4HANA Cloud with SAP IBP using SAP Integration Suite.  
 
 ## Overview
 
 This session introduces attendees to...
+The SAP Integrated Business Planning for Supply Chain (SAP IBP) solution holds a breadth of ERP information that is critical for many supply chain planning scenarios. SAP S/4HANA Cloud Public Edition stands as a system of record and is important for planning data in SAP IBP. As a result, the need for integrating SAP IBP with SAP S/4HANA is critical for customers. Learn how to use interfaces in SAP IBP with SAP Integration Suite to exchange volumes of data with SAP S/4HANA Cloud Public Edition.
 
 ## Requirements
 
