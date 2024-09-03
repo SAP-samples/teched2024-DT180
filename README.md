@@ -6,12 +6,24 @@ This repository contains the material for the SAP TechEd 2024 session called DT1
 
 ## Overview
 
-This session introduces attendees to...
-The SAP Integrated Business Planning for Supply Chain (SAP IBP) solution holds a breadth of ERP information that is critical for many supply chain planning scenarios. SAP S/4HANA Cloud Public Edition stands as a system of record and is important for planning data in SAP IBP. As a result, the need for integrating SAP IBP with SAP S/4HANA is critical for customers. Learn how to use interfaces in SAP IBP with SAP Integration Suite to exchange volumes of data with SAP S/4HANA Cloud Public Edition.
+This session introduces attendees to the SAP Integration Suite part of the demand planning integration between SAP S/4HANA Cloud Public Edition and SAP Iitegrated Business Planning for Supply Chain (SAP IBP).
+The SAP IBP solution holds a breadth of ERP information that is critical for many supply chain planning scenarios. SAP S/4HANA Cloud Public Edition stands as a system of record and is important for planning data in SAP IBP. As a result, the need for integrating SAP IBP with SAP S/4HANA is critical for customers. Learn how to setup, configure and run this integration in SAP Integration Suite using interfaces in SAP IBP to exchange volumes of data with SAP S/4HANA Cloud Public Edition.
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+The requirements to follow the exercises in this repository are:
+- Set up an Integration Suite Trial as described here: https://developers.sap.com/tutorials/cp-starter-isuite-onboard-subscribe..html
+- In the BTP Cockpit navigate to your trial subaccount and then to Security -> Users
+- Click on your user
+- If on the right the role collection PI_Integration_Developer is not assigned do the following:
+  - On the right click on Assign Role Collection
+  - Mark entry PI_Integration_Developer
+  - Click on Assign Role Collection
+ 
+Note: Please be aware that these settings will only allow you to discover, configure, deploy and run the Integration Suite iFlows. As long as you don't connect a fitting S/4 and IBP system the iFlows will throw exceptions due to connection errors.
+So if you want to run the integration end to end you need test systems of type S/4HANA Cloud Public Edition and SAP IBP. For S/4HANA the trial version is not allowing integration scenarios and for SAP IBP there is no trial version. But if you have such test systems available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practices Content 
+IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P) (https://me.sap.com/processnavigator/SolS/EARL_SolS-034/2408/SolP/78P)
+This will allow you to run the whole process end to end.
 
 ## Exercises
 
