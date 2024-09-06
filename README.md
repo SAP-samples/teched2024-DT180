@@ -21,7 +21,7 @@ The requirements to follow the exercises in this repository are:
   - Click on Assign Role Collection
  
 Note: Please be aware that these settings will only allow you to discover, configure, deploy and run the Integration Suite iFlows. As long as you don't connect a fitting S/4 and IBP system the iFlows will throw exceptions due to connection errors.
-So if you want to run the integration end to end you need test systems of type S/4HANA Cloud Public Edition and SAP IBP. For S/4HANA the trial version is not allowing integration scenarios and for SAP IBP there is no trial version. But if you have such test systems available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practices Content 
+So if you want to run the integration end to end you need test systems of type S/4HANA Cloud Public Edition and SAP IBP. For S/4HANA the trial version is not allowing integration scenarios and for SAP IBP there is no trial version. But if you have such test systems available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practices ConConfigure tent 
 IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P) (https://me.sap.com/processnavigator/SolS/EARL_SolS-034/2408/SolP/78P)
 This will allow you to run the whole process end to end.
 
@@ -36,7 +36,12 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 - [Exercise 2 - Second Exercise Description](exercises/ex2/)
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
-
+- Get an overview on the available reusable iFlows
+- Configure the iFlow for defining default settings
+- Configure, deploy and schedule the iFlow for plant replication
+- Analyse the error log
+- Change the configuration concerning filtering by plant
+- Create and deploy a wrapper iFlow calling the plant iFlow with deviating settings
   
 **OR** Link to the Tutorial Navigator for example...
 
