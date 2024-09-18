@@ -1,4 +1,4 @@
-# teched2024-DT180 - Integrating SAP S/4HANA Cloud with SAP IBP using SAP Integration Suite
+# DT180 - Integrating SAP S/4HANA Cloud with SAP IBP using SAP Integration Suite
 
 ## Description
 
