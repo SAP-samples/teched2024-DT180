@@ -31,7 +31,7 @@ The requirements to follow the exercises in this repository are:
   - Fill field Short Description with 'Wrapper iFlows for Session DT180', for example
   - Click Save  
  
-Note: Please be aware that you are only allowed to access the Integration Suite. There are an S/4 and an IBP system connected and data can be transfered from S/4 to IBP, but you won't be able to access the S/4 and IBP systems. The back integration from IBP to S/4 is not supported in this test setup.
+Note: Please be aware that you are only allowed to access the SAP Integration Suite in the setup for these exercises. There are an S/4 and an IBP system connected and data can be transfered from S/4 to IBP, but you won't be able to access the S/4 and IBP systems. The back integration from IBP to S/4 is not supported in this test setup.
 If you have test systems of type S/4HANA Cloud Public Edition and SAP Integrated Buisiness Planning for Supply Chain available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practices Content 
 IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P) (https://me.sap.com/processnavigator/SolS/EARL_SolS-034/2408/SolP/78P)
 This will allow you to go through all the setup steps and run the whole process end to end including the steps needed in S/4 and IBP.
