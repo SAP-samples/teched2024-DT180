@@ -12,18 +12,26 @@ The SAP IBP solution holds a breadth of ERP information that is critical for man
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
-- Set up an Integration Suite Trial as described here: https://developers.sap.com/tutorials/cp-starter-isuite-onboard-subscribe..html
-- In the BTP Cockpit navigate to your trial subaccount and then to Security -> Users
-- Click on your user
-- If on the right the role collection PI_Integration_Developer is not assigned do the following:
-  - On the right click on Assign Role Collection
-  - Mark entry PI_Integration_Developer
-  - Click on Assign Role Collection
+- (Needs to be adaptet to the new approach to access an existing test setup instead of a trial account)Set up an Integration Suite Trial as described here: https://developers.sap.com/tutorials/cp-starter-isuite-onboard-subscribe..html
+
+- log on to the Cloud Integration instance you are assigned to:
+    https://teched2024-eu01.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
+    https://teched2024-eu02.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
+    https://teched2024-eu03.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
+    https://teched2024-us01.integrationsuite.cfapps.us21.hana.ondemand.com/shell/home
+    https://teched2024-us02.integrationsuite.cfapps.us20.hana.ondemand.com/shell/home
+- Create your own integration content package the following way:
+  - Navigate to Design -> Integrations and APIs
+  - Click button Create
+  - Fill field Name with the following content: Session DT180 <your identifier>
+      <your identifier> should be a unique identifier representing your content. You can use your user name, but also a pseudonym. We will reuse that identifier later on for other objects as well
+  - Fill field Short Description with 'Wrapper iFlows for Session DT180', for example
+  - Click Save  
  
-Note: Please be aware that these settings will only allow you to discover, configure, deploy and run the Integration Suite iFlows. As long as you don't connect a fitting S/4 and IBP system the iFlows will throw exceptions due to connection errors.
-So if you want to run the integration end to end you need test systems of type S/4HANA Cloud Public Edition and SAP IBP. For S/4HANA the trial version is not allowing integration scenarios and for SAP IBP there is no trial version. But if you have such test systems available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practices ConConfigure tent 
+Note: Please be aware that these settings will only allow you to access the Integration Suite. There are an S/4 and an IBP system connected and data can be transfered from S/4 to IBP, but you won't be able to access the S/4 and IBP systems. The back integration from IBP to S/4 is not supported in this test setup.
+If you have test systems of type S/4HANA Cloud Public Edition and SAP Integrated Buisiness Planning for Supply Chain available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practices Content 
 IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P) (https://me.sap.com/processnavigator/SolS/EARL_SolS-034/2408/SolP/78P)
-This will allow you to run the whole process end to end.
+This will allow you to go through all the setup steps and run the whole process end to end including the steps needed in S/4 and IBP.
 
 ## Exercises
 
