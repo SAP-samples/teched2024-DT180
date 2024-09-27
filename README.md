@@ -24,7 +24,7 @@ The requirements to follow the exercises in this repository are:
   - Navigate to Design -> Integrations and APIs
   - Click button Create
   - Fill field Name with the following content: Session DT180 -your identifier-
-      -your identifier- should be a unique identifier representing your content. You can use your user name, but also a pseudonym. We will reuse that identifier later on for other objects as well
+      - -your identifier- should be a unique identifier representing your content. You can use your user name, but also a pseudonym. We will reuse that identifier later on for other objects as well
   - Fill field Short Description with 'Wrapper iFlows for Session DT180', for example
   - Click Save  
  
