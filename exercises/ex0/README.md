@@ -6,15 +6,16 @@ For getting started we will upload the needed integration flows.
 
 After completing these steps you will have uploaded all integration flows needed for the exercises into the integration content package you already created in the prerequisites step
 
-1. Download all the zip files from directory [IntegrationFLows](/IntegrationFLows)
-2.	Navigate to Design -> Integrations and APIs
+1. Download all the zip files from directory IntegrationFlows:
+ - [Trainee_Run Integrate Plants from SAP S4HANA Cloud to SAP IBP.zip](/IntegrationFlows/Trainee_Run Integrate Plants from SAP S4HANA Cloud to SAP IBP.zip)
+3.	Navigate to Design -> Integrations and APIs
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
-3.	Click on package Session DT180 -your identifier-
-4.	Click button Edit
-5.	Click tab Artifacts
-6.	On drop-down-box Add choose sub entry Integration Flow
-7.	Choose radio button Upload
+4.	Click on package Session DT180 -your identifier-
+5.	Click button Edit
+6.	Click tab Artifacts
+7.	On drop-down-box Add choose sub entry Integration Flow
+8.	Choose radio button Upload
 ``` abap
  DATA(params) = request->get_form_fields(  ).
  READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
