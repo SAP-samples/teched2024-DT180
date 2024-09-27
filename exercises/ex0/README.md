@@ -7,7 +7,7 @@ For getting started we will upload the needed integration flows.
 After completing these steps you will have uploaded all integration flows needed for the exercises into the integration content package you already created in the prerequisites step
 
 1. Download all the zip files from directory IntegrationFlows:
- - [Trainee_Run Integrate Plants from SAP S4HANA Cloud to SAP IBP.zip](/IntegrationFlows/Trainee_Run Integrate Plants from SAP S4HANA Cloud to SAP IBP.zip)
+ - [Trainee_Run Integrate Plants from SAP S4HANA Cloud to SAP IBP.zip](/IntegrationFlows/Trainee_RunIntegratePlantsFromSAPS4HANACloudToSAPIBP.zip)
 3.	Navigate to Design -> Integrations and APIs
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
