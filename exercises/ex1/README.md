@@ -60,7 +60,7 @@ OData Package Size: 50000
 ## Exercise 1.3 Produce and analyse an escalation
 
 1. Switch back to the first tab and navigate to the edit mode of iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- as described in exercise 1.1 above
-2. Double-click on transform DefineModifiedHeaders and change the Source Value of header DummyCustomerID to 'dummy' (with single quotes)
+2. Double-click on transform DefineModifiedHeaders and change the Source Value of header FieldExtensions to <CUSTDESCR value="'DUMMY''s description'"/>. This will overwrite the mapping of field CUSTDESCR and set is to DUMMY's description
 3. Deploy the iFlow again
 4. Switch back to the second tab and navigate to Monitor Message Processing again
 5. Find the latest entry of Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
@@ -71,7 +71,7 @@ Note that iFlow SAP IBP Write - Process Posted Data has status Escalated. You al
 Now let's analyse more in detail what is the issue here.
 
 7. Duplicate the second tab again to create a third one
-8. Navigate to Monitor -> Integrations and APIs on the left and Manage Integration Content -> All on the right
+8. On the new tab navigate to Monitor -> Integrations and APIs on the left and Manage Integration Content -> All on the right
 9. Find iFlow Integrate Business Partners from SAP S4HANA Cloud to SAP IBP, evtl. by using a search string (this is the standard one, not your wrapper iFlow)
 10. Click on it and check the Log Configuration
 11. If the Log Level is not Trace then change it to Trace
@@ -90,9 +90,12 @@ Note that the log level trace is activated for all users and is deactivated afte
 21. Click on tab Payload
 
 The result should look similar to this:
+<br>![](/exercises/ex1/images/SessionDT180IBPWritePostDataPayload.gif)
 
+Note that field CUSTDESCR contains string DUMMY's description, which contains a single quote. This is not supported in IBP. IBP cannot handle the special characters single and double quote, less than, greater than, carriage return and line feed. But there is a convenient solution to that.
 
-Note that this iFlow has status Completed
+22. Just repeat the steps before, but use Source Value <CUSTDESCR value="ibp:escape('DUMMY''s description')"/> for header FieldExtensions
+There won't be any validation error any more and if you have a look at the trace again you will find that CUSTDESCR has now the value DUMMY⨩s description, where the ' is replaced by a lookalike unicode character ⨩. The replacement characters for the non-supported characters in IBP are defined in iFlow Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud in externalized parameter Escaped Quotes and can be adapted if needed.
 
 ## Summary
 
