@@ -94,7 +94,7 @@ The result should look similar to this:
 
 Note that field CUSTDESCR contains string DUMMY's description, which contains a single quote. This is not supported in IBP. IBP cannot handle the special characters single and double quote, less than, greater than, carriage return and line feed. But there is a convenient solution to that.
 
-22. Just repeat the steps before, but use Source Value <CUSTDESCR value="ibp:escape('DUMMY''s description')"/> for header FieldExtensions
+22. Just repeat the steps before, but use Source Value &lt;CUSTDESCR value="ibp:escape('DUMMY''s description')"/> for header FieldExtensions
 There won't be any validation error any more and if you have a look at the trace again you will find that CUSTDESCR has now the value DUMMY⨩s description, where the ' is replaced by a lookalike unicode character ⨩. The replacement characters for the non-supported characters in IBP are defined in iFlow Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud in externalized parameter Escaped Quotes and can be adapted if needed.
 
 ## Summary
