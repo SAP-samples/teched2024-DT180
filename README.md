@@ -14,19 +14,14 @@ The SAP IBP solution holds a breadth of ERP information that is critical for man
 The requirements to follow the exercises in this repository are:
 - You need an SAP user (type P,S,I or D)
 - You need to register yourself in the booker app with an email that was not user for another user already: [booker](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
-- Log on to the Integration Suite instance you are assigned to:
-    https://teched2024-eu01.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
-    https://teched2024-eu02.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
-    https://teched2024-eu03.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
-    https://teched2024-us01.integrationsuite.cfapps.us21.hana.ondemand.com/shell/home
-    https://teched2024-us02.integrationsuite.cfapps.us20.hana.ondemand.com/shell/home
+- Navigate from the booker tool to the Integration Suite instance you are assigned to by clicking the corresponding link
+- Optionally you can bookmark the opened Integration Suite url for later direct access
 - Create your own integration content package the following way:
   - Navigate to Design -> Integrations and APIs
   - Click button Create
-  - Fill field Name with the following content: Session DT180 -your pseudonym-
-      - -your pseudonym- should be a pseudonym or your user ID
-      - Important is that it is not used by anybody else yet
-      - We will reuse that pseudonym later on for other objects as well
+  - Fill field Name with the following content: Session DT180 -your P/S/I/D/C user-
+      - -your P/S/I/D/C user- should be the SAP user you used in the booker app
+      - We will reuse -your P/S/I/D/C user- later on for other objects as well
   - Fill field Short Description with 'Wrapper iFlows for Session DT180', for example
   - Click Save  
  
