@@ -37,7 +37,7 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Modify, execute and analyse Basic Run Integrate Business Partners...](exercises/ex1/)
     - [Exercise 1.1 - Modify and deploy the basic iFlow](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
+    - [Exercise 1.2 - Check the logs of the first iFlow run](exercises/ex1#exercise-12-sub-exercise-2-description)
 - [Exercise 2 - Second Exercise Description](exercises/ex2/)
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
