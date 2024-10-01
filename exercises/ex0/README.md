@@ -7,10 +7,11 @@ For getting started we will upload the needed integration flows.
 After completing these steps you will have uploaded all integration flows needed for the exercises into the integration content package you already created in the prerequisites step
 
 1. Download all the zip files from directory IntegrationFlows:
- - [Basic Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip](/IntegrationFlows/BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
- - [Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip](/IntegrationFlows/RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+ - [BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+ - [RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+
 3.	Navigate to Design -> Integrations and APIs
-4.	Click on package Session DT180 -your pseudonym-
+4.	Click on your selfcreated package Session DT180 -your own user-
 5.	Click button Edit
 6.	Click tab Artifacts
 7.	On drop-down-box Add choose sub entry Integration Flow
