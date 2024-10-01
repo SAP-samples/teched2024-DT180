@@ -60,7 +60,7 @@ OData Package Size: 50000
 ## Exercise 1.3 Produce and analyse an escalation
 
 1. Switch back to the first tab and navigate to the edit mode of iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- as described in exercise 1.1 above
-2. Double-click on transform DefineModifiedHeaders and change the Source Value of header FieldExtensions to <CUSTDESCR value="'DUMMY''s description'"/>. This will overwrite the mapping of field CUSTDESCR and set is to DUMMY's description
+2. Double-click on transform DefineModifiedHeaders and change the Source Value of header FieldExtensions to &lt;CUSTDESCR value="'DUMMY''s description'"/>. This will overwrite the mapping of field CUSTDESCR and set is to DUMMY's description
 3. Deploy the iFlow again
 4. Switch back to the second tab and navigate to Monitor Message Processing again
 5. Find the latest entry of Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
