@@ -66,7 +66,8 @@ OData Package Size: 50000
 5. Find the latest entry of Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
 6. Filter by the correlation ID of this new run as described in exercise 1.2
 
-Note that iFlow SAP IBP Write - Process Posted Data has status Escalated. You also can see from the Custom Headers of that Artifact that one entry could not be processed. 
+Note that iFlow SAP IBP Write - Process Posted Data has status Escalated. You also can see from the Custom Headers of that Artifact that there was only one entry, which failed the validation. 
+<br>![](/exercises/ex1/images/SessionDT180IBPWriteProcessPostedDataValidationError.gif)
 
 Note that this iFlow has status Completed
 
