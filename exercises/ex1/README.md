@@ -68,6 +68,29 @@ OData Package Size: 50000
 
 Note that iFlow SAP IBP Write - Process Posted Data has status Escalated. You also can see from the Custom Headers of that Artifact that there was only one entry, which failed the validation. 
 <br>![](/exercises/ex1/images/SessionDT180IBPWriteProcessPostedDataValidationError.gif)
+Now let's analyse more in detail what is the issue here.
+
+7. Duplicate the second tab again to create a third one
+8. Navigate to Monitor -> Integrations and APIs on the left and Manage Integration Content -> All on the right
+9. Find iFlow Integrate Business Partners from SAP S4HANA Cloud to SAP IBP, evtl. by using a search string (this is the standard one, not your wrapper iFlow)
+10. Click on it and check the Log Configuration
+11. If the Log Level is not Trace then change it to Trace
+
+Note that the log level trace is activated for all users and is deactivated after 15 minutes already. So it might be that someone else already activated the trace level for the iFlow and it also might happen quite often that it is deactivated automatically
+
+12. Switch back to the first tab and deploy iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- again
+13. Switch to the third tab. As long as the status of iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- is starting click the refresh button
+14. Afterwards go to the second tab and refresh the list there until the latest run of Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- is Completed
+15. Find the corresponding run of iFlow Integrate Business Partners from SAP S4HANA Cloud to SAP IBP. If there are several ones in parallel fliter by the correlation ID.
+16. Double-click it
+17. Scroll down to Logs
+18. The entry Log Level should be a link with text Trace. Click on it
+19. Click on entry Delete body from property in the list of run steps. THis is the last step before IBP Write - Post Data is called via ProcessDirect
+20. Then click on tab Message Content on top
+21. Click on tab Payload
+
+The result should look similar to this:
+
 
 Note that this iFlow has status Completed
 
