@@ -23,7 +23,7 @@ Please note that the integration process has two transforms. One is for defining
 10. Find a row with Name DummyCustomerID and overwrite SourceValue with DUMMY
 11. Find a row with Name CustomerFilter and overwrite SourceValue with an empty string (you might need to scroll for that)
 12. Find a row with Name BatchName. The Source Value is -your P S I D C user- Basic Run Business Partner: ${header.SAP_MplCorrelationId}. Please replace -your P S I D C user- with your own user ID
-13. The rest of the headers can be left unchanged.
+13. The rest of the headers should be left unchanged.
 14. Click Deploy on the top right corner of the screen
 15. On the upcoming popup leave the Runtime Profile Cloud Integration as is an click Yes
 16. A popup is shown with the Deployment information 'Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP ...' is triggered for deployment.
