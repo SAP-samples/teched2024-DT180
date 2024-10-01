@@ -12,9 +12,9 @@ The SAP IBP solution holds a breadth of ERP information that is critical for man
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
-- (Needs to be adaptet to the new approach to access an existing test setup instead of a trial account)Set up an Integration Suite Trial as described here: https://developers.sap.com/tutorials/cp-starter-isuite-onboard-subscribe..html
-
-- log on to the Cloud Integration instance you are assigned to:
+- You need an SAP user (type P,S,I or D)
+- You need to register yourself in the booker app with an email that was not user for another user already: [booker](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
+- Log on to the Integration Suite instance you are assigned to:
     https://teched2024-eu01.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
     https://teched2024-eu02.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
     https://teched2024-eu03.integrationsuite.cfapps.eu20-001.hana.ondemand.com/shell/home
@@ -23,11 +23,10 @@ The requirements to follow the exercises in this repository are:
 - Create your own integration content package the following way:
   - Navigate to Design -> Integrations and APIs
   - Click button Create
-  - Fill field Name with the following content: Session DT180 -your identifier-
-      - -your identifier- should be a unique identifier representing your content
-      - You can use your user name, but also a pseudonym
-      - Ideally it is some term that is not used yet, as it simplifies searching for your log content later
-      - We will reuse that identifier later on for other objects as well
+  - Fill field Name with the following content: Session DT180 -pseudonym-
+      - -pseudonym- should be a pseudonym or your user ID
+      - Important is that it is not used by anybody else yet
+      - We will reuse that pseudonym later on for other objects as well
   - Fill field Short Description with 'Wrapper iFlows for Session DT180', for example
   - Click Save  
  
