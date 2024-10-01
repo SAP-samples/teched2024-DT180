@@ -40,6 +40,6 @@ After completing these steps you will have uploaded all integration flows needed
 
 ## Summary
 The result of the steps above should look similar to this, except that -your P S I D C user- should be replaced by your own user ID everywhere:
-<br>![](/exercises/ex0/images/00_00_0010.png)
+<br>![](/exercises/ex0/images/SessionDT180Package.gif)
 Now that you have created all the needed integration flows
 Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
