@@ -11,7 +11,7 @@ After completing these steps you will have uploaded all integration flows needed
 3.	Navigate to Design -> Integrations and APIs
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
-4.	Click on package Session DT180 -your identifier-
+4.	Click on package Session DT180 -your pseudonym-
 5.	Click button Edit
 6.	Click tab Artifacts
 7.	On drop-down-box Add choose sub entry Integration Flow
