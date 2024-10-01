@@ -57,6 +57,19 @@ Host for SAP S4/HANA Cloud: ...-api.s4hana.ondemand.com
 Master Data Prefix: T24
 OData Package Size: 50000
 
+## Exercise 1.3 Produce and analyse an escalation
+
+1. Switch back to the first tab and navigate to the edit mode of iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- as described in exercise 1.1 above
+2. Double-click on transform DefineModifiedHeaders and change the Source Value of header DummyCustomerID to 'dummy' (with single quotes)
+3. Deploy the iFlow again
+4. Switch back to the second tab and navigate to Monitor Message Processing again
+5. Find the latest entry of Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
+6. Filter by the correlation ID of this new run as described in exercise 1.2
+
+Note that iFlow SAP IBP Write - Process Posted Data has status Escalated. You also can see from the Custom Headers of that Artifact that one entry could not be processed. 
+
+Note that this iFlow has status Completed
+
 ## Summary
 
 You've now learned the basics on how you can analyse the run of an iFlow
