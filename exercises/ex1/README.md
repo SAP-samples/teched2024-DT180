@@ -33,6 +33,7 @@ After completing these steps you will have modified and deployed the above menti
 23. Then click on the search button on the right of the ID field. The result is that only your iFlow and the iFlows that have been called by you iFlow are shown on the screen
 24. Click on Artifact Name SAP IBP Write - Process Posted Data
 The screen should look similar to this one:
+<br>![](/exercises/ex1/images/SessionDT180IBPWriteProcessPostedData.gif)
 
      The two integration packages copied in the steps above should be visible here
     After
