@@ -9,6 +9,10 @@ After completing these steps you will have uploaded all integration flows needed
 1. Download all the zip files from directory IntegrationFlows:
  - [BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
  - [RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+ - [RunIntegratePlantsFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegratePlantsFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+ - [RunIntegrateProductsEtcFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateProductsEtcFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+ - [RunIntegrateSalesOrderHistoryFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateSalesOrderHistoryFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
+ - [RunIntegrateKFsFromSAPIBPToSAPS4HANACloudAsPlannedIndependentRequirements-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateKFsFromSAPIBPToSAPS4HANACloudAsPlannedIndependentRequirements-yourPSIDCuser-.zip)
 
 3.	Navigate to Design -> Integrations and APIs
 4.	Click on your selfcreated package Session DT180 -your own user-
