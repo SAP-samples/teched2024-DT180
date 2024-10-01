@@ -16,6 +16,17 @@ After completing these steps you will have uploaded all integration flows needed
 6.	Click tab Artifacts
 7.	On drop-down-box Add choose sub entry Integration Flow
 8.	Choose radio button Upload
+9.	Click on Browse...
+10.	Choose file Basic Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip
+11.	Replace -your P S I D C user- by your user ID in field Name of the to be created integration flow (iFlow)
+12.	Click Add
+13.	Repeat steps 7 to 12 for the following files:
+- Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip
+- Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip
+- Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip
+- Run Integrate Sales Order History from SAP S4HANA Cloud to SAP IBP -your P S I D C user-.zip
+- Run Integrate KFs from SAP IBP to SAP S4HANA Cloud as Planned Independent Requirements -your P S I D C user-.zip
+    
 ``` abap
  DATA(params) = request->get_form_fields(  ).
  READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
