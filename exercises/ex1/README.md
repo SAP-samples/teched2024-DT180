@@ -16,7 +16,7 @@ After completing these steps you will have modified and deployed the above menti
 6. Click on Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
 
 Please note that the integration process has a main integration process with several transforms. The first one is for defining modified headers and the second one is a processDirect call of the standard iFlow for Integration of Business Partners from S/4 to IBP. It is possible to schedule the standard iFlows standalone, but they only can have one configuration. So if there is a need to run the iFlows with different configurations it is better to define wrapper iFlows, like the one you uploaded, which modify the header parameters before they call the standard iFlows. This way every user can have his own set of configuration parameters without interfering with others. Please do not change the configuration of the main iFlows in package SAP IBP - Integration with SAP S/4HANA Cloud, but only the configuration of you own wrapper iFlows. Otherwise you risk to make the main iFlows unusable for other users.
-
+<br>![](/exercises/ex1/images/SessionDT180BuPaDefineHeaders.gif)
 7. Click Configure (as an alternative you can uses dropdown Actions -> Configure directly instead of opening the iFlow)
 
 8. Double-click on transform Define Modified Headers
