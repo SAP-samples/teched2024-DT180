@@ -35,4 +35,4 @@ After completing these steps you will have uploaded all integration flows needed
 The result of the steps above should look similar to the following, except that -your P S I D C user- should be replaced by your own user ID everywhere:
 <br>![](/exercises/ex0/images/SessionDT180Package.gif)
 Now that you have created all the needed integration flows
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Continue to - [Exercise 1 - Modify, execute and analyse Run Integrate Business Partners...](../ex1/README.md)
