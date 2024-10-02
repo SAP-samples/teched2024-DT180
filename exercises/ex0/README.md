@@ -7,7 +7,6 @@ For getting started we will upload the needed integration flows.
 After completing these steps you will have uploaded all integration flows needed for the exercises into the integration content package you already created in the prerequisites step
 
 1. Download all the zip files from directory [IntegrationFlows](/IntegrationFlows/):
- - [BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/BasicRunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
  - [RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
  - [RunIntegratePlantsFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegratePlantsFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
  - [RunIntegrateProductsEtcFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip](/IntegrationFlows/RunIntegrateProductsEtcFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip)
