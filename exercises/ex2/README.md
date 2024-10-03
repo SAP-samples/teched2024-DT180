@@ -1,42 +1,47 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise 2 - Configure, deploy and analyse Run Integrate Plants...
 
-In this exercise, we will create...
+In this exercise, we will modify, execute and analyse iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user-
 
-## Exercise 2.1 Sub Exercise 1 Description
+## Exercise 2.1 Configure and deploy the Run Plants iFlow
 
-After completing these steps you will have created...
+After completing these steps you will have modified and deployed the above mentioned iFlow.
 
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
+1. On the first tab open iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user- of your package Session DT180 -your own user-
+2. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
+3. In Batch Name the value should be -your P S I D C user- Run Plant: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
+4. Change the value of Plant Filter from -keep default- to 1000-1999. This will select all plants between 1000 and 1999.
+5. The rest of the configuration parameters should be left unchanged.
+6. Click Deploy on the lower right corner of the screen
+7. On the upcoming popup click Yes
+8. Switch to the second tab opened in exercise 1 and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
+9. Update the display if needed
+10. Filter by the correlation ID of the run of your iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-
+11. CLick on iFlow SAP IBP Write - Process Posted Data
+12. Custom Header IBP Write Batch File should have the following content: batch:..., name:Plants, count:13, status:PROCESSED, errorCount:0, so 13 plants shoud have been replicated
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ). 
-```
+Note: If you want to analyse more in detail how the data have been processed in IBP and which errors occured there you can logon to the IBP system (not possible in this exercise) and open app Data Integration JObs. You can find the write batch with the Batch ID you can see in this parameter, but it is also possible to search the fitting batch by the correlation ID in that app. In the app you will be able to download the first around 50000 rows of every batch file and the first 50000 rows with errors for analysing the data and the error messages in detail.
 
+## Exercise 2.2 Use a more complex plant filter
 
+After completing these steps you will be able to define filters for the plant ID with several intervals and single values
 
-## Exercise 2.2 Sub Exercise 2 Description
+1. Switch back to the first tab and open iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your P S I D C user- if not done yet
+2. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
+4. Change the value of Plant Filter from 1000-1999 to 05AA-09ZZ,1000-1999,2060,4060. This will select all plants between 05AA and 09ZZ, between 1000 and 1999, 2060  and 4060.
+5. The rest of the configuration parameters should be left unchanged.
+6. Click Deploy on the lower right corner of the screen
+7. On the upcoming popup click Yes
+8. Switch to the second tab opened above and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
+9. Update the display if needed
+10. Filter by the correlation ID of the second run of your iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-
+11. CLick on iFlow SAP IBP Write - Process Posted Data
+12. Custom Header IBP Write Batch File should have the following content: batch:..., name:Plants, count:18, status:PROCESSED, errorCount:0, so 5 more plants should have been selected and processed
 
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex2/images/02_02_0010.png)
+Note: Configuration Parameter Plant Filter is also available in your iFlows Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user- and Run Integrate Sales Order History from SAP S4HANA Cloud to SAP IBP -your own user-. WHatever filter you are setting in this iFlow you also should set there to make sure that you are not integrating any products that are not assigned to at least one of the plants or sales history data for non-integrated plants. In the standard settings of the underlying configuration-only iFlows these configuration parameters have the default value -keep default-, which means they are taking over the value from iFlow Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud. So the filter can be defined centrally there. For this exercise you shall not change the configuration of the configuration-only iFlows, so you have to do double or tripple maintenance of some configuration parameters in different iFlows. If you forget to keep the filters in sync it is still possible that you are not running into any issues, as the needed data probably have been replicated already by other users.
 
 ## Summary
 
-You've now ...
+You've now learned to configure and deploy the iFlow for repilcating plants and it's most important configuration parameters
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+Continue to - [Exercise 3 - Exercise 2 Description](../ex3/README.md)
+
