@@ -1,6 +1,6 @@
 # Exercise 1 - Configure, deploy and analyse Run Integrate Business Partners...
 
-In this exercise, we will modify, execute and analyse iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your P S I D C user-
+In this exercise, we will modify, execute and analyse iFlow Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your P S I D C user-
 
 ## Exercise 1.1 Configure and deploy the Run Business Partner iFlow
 
