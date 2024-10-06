@@ -1,106 +1,76 @@
-# Exercise 3 - Configure, deploy and analyse Run Integrate Business Partners...
+# Exercise 3 - Configure, deploy and analyse Run Integrate Products etc...
 
-In this exercise, we will modify, execute and analyse iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your P S I D C user-
+In this exercise, we will modify, execute and analyse iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your P S I D C user-
 
-## Exercise 3.1 Configure and deploy the Run Business Partner iFlow
+## Exercise 3.1 Configure and deploy the Run Plants iFlow
 
 After completing these steps you will have modified and deployed the above mentioned iFlow.
 
-1. Log on to the Cloud Integration instance
+The Product, etc. iFlow is the most complex one of the provided iFlows. It is selecting not only products, but also other related data. Using the default settings not only products (master data type PRODUCT) are created in IBP, but also units of measure (UOMTO) and product specific unit of measure conversion factors (UOMCONVERSIONFACTOR)
 
-2. Navigate to Design -> Integrations and APIs on the left. 
-3. If there are too many entries for scrolling you can search by your user ID to shrink the list
-4. Click on your self-created package Session DT180 -your own user-
-     The details of that package should be shown
-5. Click on tab Artifacts
-6. Click on Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
+1. On the first tab open iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user- of your package Session DT180 -your own user-
+2. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
+3. In Batch Name the value should be -your P S I D C user- Run Product, etc.: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
+4. Change the value of Plant Filter from -keep default- to 05AA-09ZZ,1000-1999,2060,4060. This will select all plants between 05AA and 09ZZ, between 1000 and 1999, 2060 and 4060.
+4. Change the value of Product Filter from -keep default- to FG126-FG426. This will select all products between FG126 and FG426.
+5. In Datastore ID for Product Plant Filter replace -keep default- by the empty string
+7. The rest of the configuration parameters should be left unchanged.
+8. Click Deploy on the lower right corner of the screen
+9. On the upcoming popup click Yes
+10. Switch to the second tab opened in exercise 1 and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
+11. Update the display if needed
+12. Filter by the correlation ID of the run of your iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-
+13. CLick on iFlow SAP IBP Write - Process Posted Data
+14. Custom Header IBP Write Batch File should have the following three entires:
+batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
+batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
+batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
 
-Please note that the integration process has a main integration process with several transforms. The first one is for defining modified headers and the second one is a processDirect call of the standard iFlow for Integration of Business Partners from S/4 to IBP. It is possible to schedule the standard iFlows standalone, but they only can have one configuration. So if there is a need to run the iFlows with different configurations it is better to define wrapper iFlows, like the one you uploaded, which modify the header parameters before they call the standard iFlows. This way every user can have his own set of configuration parameters without interfering with others. Please do not change the configuration of the main iFlows in package SAP IBP - Integration with SAP S/4HANA Cloud, but only the configuration of you own wrapper iFlows. Otherwise you risk to make the main iFlows unusable for other users.
-<br>![](/exercises/ex1/images/SessionDT180BuPaDefineHeaders.gif)
-The rounded boxes around the source values of the headers indicate that the source values are not defined statically, but by externalized parameters, which can be configured. 
+## Exercise 3.2 Create only some data types in IBP
 
-8. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
-9. In Batch Name the value should be -your P S I D C user- Run Business Partner: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
-10. Change the value of Dummy Customer ID from -keep default- to DUMMY
-11. Set the Customer Filter to an empty string
-12. The rest of the configuration parameters should be left unchanged.
-13. Click Deploy on the lower right corner of the screen
-16. On the upcoming popup leave the Runtime Profile Cloud Integration as is an click Yes
-17. A popup is shown with the Deployment information 'Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP ...' is triggered for deployment.
-18. After some time there should be another temporary popup saying 'Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP ...' successfully deployed.
+After completing these steps you will be able to run the integration of products, etc. for only some master data types
 
-## Exercise 1.2 Check the logs of the first iFlow run
-
-After completing these steps you will have a rough idea how to analyse what the actual run of the iFlow did. 
-Note: The iFlow is set up in a way that it is triggered once after every new deployment. This is very useful for testing the iFlow. So to start the iFlow again you just need to repeat the deployment step. In a productive environment it is better to schedule the iFlow with a certain frequency or to call it from outside, but this is not part of this exercise. The standard iFlows have a few more configuration parameters, where you can schedule the runs in a periodic manner. There are also some parameters to influence the technical settings for the remote connections. This is also skipped for this exercise setup.
-
-1. To check the results of the run of the iFlow triggered during deployment you should duplicate the tab in the browser
-2. In the duplicate tab navigate to Monitor -> Integrations and APIs on the left and then Monitor Message Processing -> All Artifacts on the right
-3. You should be able to find an entry with the Artifact Name 'Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-' quite high in the shown list
-4. You can click on that entry and scroll though the content on the right
-5. Under Properties you can find the Correlation ID. Please copy the correlation ID to the clipboard by marking it and typing ctrl-C
-6. Then click on field ID on the top right corner of the screen and type ctrl-V to set a filter for the correlation ID
-7. Then click on the search button on the right of the ID field. The result is that only your iFlow and the iFlows that have been called by your iFlow are shown on the screen. All Artifacts shown should have status Completed.
-8. Click on Artifact Name SAP IBP Write - Process Posted Data
-The screen should look similar to this one:
-<br>![](/exercises/ex1/images/SessionDT180IBPWriteProcessPostedData.gif)
-Note 1: As you can see from the screenshot above there should be one entry sent to IBP and processed successfully there. The reason for that is that we have defined a DummyCustomerID, but we set CustomerFilter to an empty string. This way we only creaded a dummy customer in IBP, but we did not replicate customers from S/4 to IBP, which is only triggered if a filter is defined in CustomerFliter. This is why the delivered default value of that field is 0-ZZZ, which means all customers with an ID that is alphabetically between 0 and ZZZ are replicated from S/4 to IBP.
-9. Click on artifact Integrate Business Partners from SAP S4HANA Cloud to SAP IBP
-You should be able to see some Custom Headers, at least if you scroll down and and attachment Parameters even further down in the list. Please click on the link of attachment Parameters. You should be able to see the content of the attachment Parameters. If the content is not readable, because all rows are written into the same row you can download the atatchment and open it with an editor to read the content. The attachment contains the most important information about which parameters were used when processing the business iFlow Integrate Business Partners from SAP S4HANA Cloud to SAP IBP.
-The content of the attachment could look like this:
-Customer Filter: 
-Dummy Customer ID: DUMMY
-Field Extensions: 
-Attributes in SAP IBP: CUSTID,CUSTCHANNEL,CUSTCOUNTRY,CUSTDESCR,CUSTREGION
-Further Filters: 
-Host for SAP S4/HANA Cloud: ...-api.s4hana.ondemand.com
-Master Data Prefix: T24
-OData Package Size: 50000
-
-## Exercise 1.3 Produce and analyse an escalation
-
-1. Switch back to the first tab and navigate to the configuration of iFlow Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- as described in exercise 1.1 above
-2. Change the Value of configuration parameter Field Extensions to &lt;CUSTDESCR value="'DUMMY''s description'"/>. This will overwrite the mapping of field CUSTDESCR and set is to DUMMY's description
+1. On the first tab configure iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-
+2. Change configuration parameter Master Data Types from PRODUCT,UOMTO,UOMCONVERSIONFACTOR to PRODUCT,UOMTO
 3. Deploy the iFlow again
-4. Switch back to the second tab and navigate to Monitor Message Processing again
-5. Find the latest entry of Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
-6. Filter by the correlation ID of this new run as described in exercise 1.2
+4. Switch to the second tab and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
+5. Update the display if needed
+6. Filter by the correlation ID of the latest run of your iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-
+7. CLick on iFlow SAP IBP Write - Process Posted Data
+8. Custom Header IBP Write Batch File should have the following content: batch:..., name:Plants, count:18, status:PROCESSED, errorCount:0, so 5 more plants should have been selected and processed
+9. Custom Header IBP Write Batch File should have the following two entires:
+batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
+batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
+10. Repeat steps 1 t 9 above, but Change configuration parameter Master Data Types to UOMCONVERSIONFACTOR
+11. Custom Header IBP Write Batch File of iFlow iFlow SAP IBP Write - Process Posted Data should have the following  entry now:
+batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
 
-Note that your iFlow and iFlow SAP IBP Write - Process Posted Data have status Escalated. You also can see from the Custom Headers of that Artifact that there was again one entry, but it failed the validation. 
-<br>![](/exercises/ex1/images/SessionDT180IBPWriteProcessPostedDataValidationError.gif)
-Now let's analyse more in detail what is the issue here.
+## Exercise 3.3 Create a datastore with selected product plant combinations
 
-7. Duplicate the second tab again to create a third one
-8. On the new tab navigate to Monitor -> Integrations and APIs on the left and Manage Integration Content -> All on the right
-9. Find iFlow Integrate Business Partners from SAP S4HANA Cloud to SAP IBP, evtl. by using a search string (this is the standard one, not your wrapper iFlow)
-10. Click on it and check the Log Configuration
-11. If the Log Level is not Trace then change it to Trace
+After completing these steps you will be able to save the selected product plant combinations in a datastore for later filtering
 
-Note that the log level trace is activated for all users and is deactivated after 15 minutes already. So it might be that someone else already activated the trace level for the iFlow and it also might happen quite often that it is deactivated automatically
+1. Create a fourth tab by duplicating the thrird one
+2. Navigate to Monitor -> Integrations and APIs and then Manage Stores -> Data Stores
+3. Check that there is a datastore with name ProductPlantFilter
+4. Click on that data store
+5. Check that there is no entry with ID -your own user- Product Plant Filter
+6. On the first tab configure iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-
+7. Change configuration parameter Datastore ID for Product Plant Filter from empty string to -your own user- Product Plant Filter
+3. Deploy the iFlow again
+4. Check that the iFlow was started and finished successfully
+5. Go to the fourth tab again and refresh the list of Data Stores
+6. Click on data store ProducPlantFilters again
+5. Check that there is an entry with ID -your own user- Product Plant Filter now
+6. Mark the new entry and download it
+7. Open the zip file and the file body within it
+8. It should look as follows:
+<?xml version="1.0" encoding="utf-8"?><S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710</S4ProductPlantFilter>
 
-12. Switch back to the first tab and deploy iFlow Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- again
-13. Switch to the third tab. As long as the status of iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- is starting click the refresh button
-14. Afterwards go to the second tab and refresh the list there until the latest run of Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- is Completed
-15. Find the corresponding run of iFlow Integrate Business Partners from SAP S4HANA Cloud to SAP IBP. If there are several ones within a short timeframe filter by the correlation ID of your iFlow.
-16. Double-click it
-17. Scroll down to Logs
-18. The entry Log Level should be a link with text Trace. Click on it. (If it's not Trace try again to set log level trace for this iFlow and make sure it's the right one and redeploy your iFlow.)
-19. Click on entry Delete body from property in the list of run steps. This is the last step before IBP Write - Post Data is called via ProcessDirect
-20. Then click on tab Message Content on top
-21. Click on tab Payload
-
-The result should look similar to this:
-<br>![](/exercises/ex1/images/SessionDT180IBPWritePostDataPayload.gif)
-
-Note that field CUSTDESCR contains string DUMMY's description, which contains a single quote. This is not supported in IBP. IBP cannot handle the special characters single and double quote, less than, greater than, carriage return and line feed. But there is a convenient solution to that.
-
-22. Just repeat the steps before, but use Source Value &lt;CUSTDESCR value="ibp:escape('DUMMY''s description')"/> for configuration parameter Field Extensions
-There won't be any validation error any more and if you have a look at the trace again you will find that CUSTDESCR has now the value DUMMY⨩s description, where the ' is replaced by a look-alike unicode character ⨩. The replacement characters for the non-supported characters in IBP are defined in iFlow Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud in configuration parameter Escaped Quotes and can be adapted if needed.
+This datastore can be used later when integrating the sales order history data, so that no sales history is loaded for products that have not been created in IBP or for product plant combinations for which no planned independent requirements can be created in S/4 after the forcast has been calculated in IBP.
 
 ## Summary
 
-You've now learned the basics on how you can analyse the run of an iFlow
+You've now learned to configure and deploy the iFlow for repilcating products etc and some of it's configuration parameters
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
-
+Continue to - [Exercise 4 - Exercise 4 Description](../ex4/README.md)
 
