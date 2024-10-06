@@ -56,17 +56,22 @@ After completing these steps you will be able to save the selected product plant
 5. Check that there is no entry with ID -your own user- Product Plant Filter
 6. On the first tab configure iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-
 7. Change configuration parameter Datastore ID for Product Plant Filter from empty string to -your own user- Product Plant Filter
-3. Deploy the iFlow again
-4. Check that the iFlow was started and finished successfully
-5. Go to the fourth tab again and refresh the list of Data Stores
-6. Click on data store ProducPlantFilters again
-5. Check that there is an entry with ID -your own user- Product Plant Filter now
-6. Mark the new entry and download it
-7. Open the zip file and the file body within it
-8. It should look as follows:
+8. Deploy the iFlow again
+9. Check that the iFlow was started and finished successfully
+10. Go to the fourth tab again and refresh the list of Data Stores
+11. Click on data store ProducPlantFilters again
+12. Check that there is an entry with ID -your own user- Product Plant Filter now
+13. Mark the new entry and download it
+14. Open the zip file and the file body within it
+15. It should look as follows:
 <?xml version="1.0" encoding="utf-8"?><S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710</S4ProductPlantFilter>
+16. Repeat steps 6 to 14, but set configuration parameter Product Filter to FG426-FG626 instead of FG126-FG426
+17. The file body of the downloaded zip file now should look like this:
+<?xml version="1.0" encoding="utf-8"?><S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710;FG626:1010,1710</S4ProductPlantFilter>
 
-This datastore can be used later when integrating the sales order history data, so that no sales history is loaded for products that have not been created in IBP or for product plant combinations for which no planned independent requirements can be created in S/4 after the forcast has been calculated in IBP.
+So basically the entity in the datastore is updated with the new product FG626 and the old entries are still kept. If needed the entity in the data store can be deleted to reset it.
+
+The entity in the data store can be used later when integrating the sales order history data, so that no sales history is loaded for products that have not been created in IBP or for product plant combinations for which no planned independent requirements can be created in S/4 after the forcast has been calculated in IBP.
 
 ## Summary
 
