@@ -55,7 +55,7 @@ After completing these steps you will be able to save the selected product plant
 
 1. Create a fourth tab by duplicating the thrird one
 2. Navigate to Monitor -> Integrations and APIs and then Manage Stores -> Data Stores
-3. Check that there is a datastore with name ProductPlantFilter
+3. Check that there is a data store with name ProductPlantFilter
 4. Click on that data store
 5. Check that there is no entry with ID -your own user- Product Plant Filter
 6. On the first tab configure iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-
