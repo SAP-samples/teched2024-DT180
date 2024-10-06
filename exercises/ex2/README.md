@@ -59,6 +59,8 @@ After completing these steps you will be able to define a field extension for pl
 14. Click on Tab Message Content and sub tab Payload
 15. If you have the needed authorization you should be able to see the content of the data that are sent to IBP and you should see that some entries have value EMEA in variable LOCREGION, while others have value Americas. There should also be a comment before the items: &lt;!--custom fields: LOCREGION--> It is indicating that field LOCREGION has been modified by custom logic
 
+Note Mapping cannot take a flat value, for example: “./AddressID”, give a function instead like: ibp:escape(./AddressID) or like: Concat(‘’,./AddressID) 
+
 ## Summary
 
 You've now learned to configure and deploy the iFlow for repilcating plants and it's most important configuration parameters
