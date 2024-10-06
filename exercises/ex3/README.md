@@ -22,6 +22,7 @@ The Product, etc. iFlow is the most complex one of the provided iFlows. It is se
 12. Filter by the correlation ID of the run of your iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-
 13. CLick on iFlow SAP IBP Write - Process Posted Data
 14. Custom Header IBP Write Batch File should have the following three entires:
+    
 batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
 batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
 batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
@@ -39,10 +40,13 @@ After completing these steps you will be able to run the integration of products
 7. CLick on iFlow SAP IBP Write - Process Posted Data
 8. Custom Header IBP Write Batch File should have the following content: batch:..., name:Plants, count:18, status:PROCESSED, errorCount:0, so 5 more plants should have been selected and processed
 9. Custom Header IBP Write Batch File should have the following two entires:
+    
 batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
 batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
+
 10. Repeat steps 1 t 9 above, but Change configuration parameter Master Data Types to UOMCONVERSIONFACTOR
 11. Custom Header IBP Write Batch File of iFlow iFlow SAP IBP Write - Process Posted Data should have the following  entry now:
+    
 batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
 
 ## Exercise 3.3 Create a datastore with selected product plant combinations
@@ -66,8 +70,9 @@ After completing these steps you will be able to save the selected product plant
 15. It should look as follows:
     
 &lt;?xml version="1.0" encoding="utf-8"?>&lt;S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710&lt;/S4ProductPlantFilter>
-17. Repeat steps 6 to 14, but set configuration parameter Product Filter to FG426-FG626 instead of FG126-FG426
-18. The file body of the downloaded zip file now should look like this:
+
+16. Repeat steps 6 to 14, but set configuration parameter Product Filter to FG426-FG626 instead of FG126-FG426
+17. The file body of the downloaded zip file now should look like this:
 
 &lt;?xml version="1.0" encoding="utf-8"?>&lt;S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710;FG626:1010,1710&lt;/S4ProductPlantFilter>
 
