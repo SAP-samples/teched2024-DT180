@@ -64,9 +64,11 @@ After completing these steps you will be able to save the selected product plant
 13. Mark the new entry and download it
 14. Open the zip file and the file body within it
 15. It should look as follows:
+    
 &lt;?xml version="1.0" encoding="utf-8"?>&lt;S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710&lt;/S4ProductPlantFilter>
-16. Repeat steps 6 to 14, but set configuration parameter Product Filter to FG426-FG626 instead of FG126-FG426
-17. The file body of the downloaded zip file now should look like this:
+17. Repeat steps 6 to 14, but set configuration parameter Product Filter to FG426-FG626 instead of FG126-FG426
+18. The file body of the downloaded zip file now should look like this:
+
 &lt;?xml version="1.0" encoding="utf-8"?>&lt;S4ProductPlantFilter>FG126:1010,1710;FG129:1010,1710;FG130:1010,1710;FG2_CP:1010,1710;FG226:1010,1710;FG228:1010,1710;FG233:1010,1710;FG29:1010,1710;FG326:1010,1710;FG328:1010,1710;FG426:1010,1710;FG626:1010,1710&lt;/S4ProductPlantFilter>
 
 So basically the entity in the datastore is updated with the new product FG626 and the old entries are still kept. If needed the entity in the data store can be deleted to reset it.
