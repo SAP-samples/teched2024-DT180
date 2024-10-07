@@ -84,5 +84,5 @@ The entity in the data store can be used later when integrating the sales order 
 
 You've now learned to configure and deploy the iFlow for repilcating products etc and some of it's configuration parameters
 
-Continue to - [Exercise 4 - Exercise 4 Description](../ex4/README.md)
+Continue to - [Exercise 4 - Configure, deploy and analyse Run Integrate Sales History Data...](../ex4/README.md)
 
