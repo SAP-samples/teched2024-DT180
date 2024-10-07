@@ -101,5 +101,5 @@ There won't be any validation error any more and if you have a look at the trace
 
 You've now learned the basics on how you can analyse the run of an iFlow
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 2 - Configure, deploy and analyse Run Integrate Plants...](../ex2/README.md)
 
