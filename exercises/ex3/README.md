@@ -12,7 +12,7 @@ The Product, etc. iFlow is the most complex one of the provided iFlows. It is se
 2. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
 3. In Batch Name the value should be -your P S I D C user- Run Product, etc.: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
 4. Change the value of Plant Filter from -keep default- to 05AA-09ZZ,1000-1999,2060,4060. This will select all plants between 05AA and 09ZZ, between 1000 and 1999, 2060 and 4060.
-4. Change the value of Product Filter from -keep default- to FG126-FG426. This will select all products between FG126 and FG426.
+4. Change the value of Product Filter from -keep default- to FG126-FG426,HT2000. This will select all products between FG126 and FG426 and HT2000
 5. In Datastore ID for Product Plant Filter replace -keep default- by the empty string
 7. The rest of the configuration parameters should be left unchanged.
 8. Click Deploy on the lower right corner of the screen
