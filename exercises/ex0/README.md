@@ -2,7 +2,7 @@
 
 For getting started we will upload the needed integration flows.
 
-## Level 2 Heading
+## Download and upload integration flow zip files
 
 After completing these steps you will have uploaded all integration flows needed for the exercises into the integration content package you already created in the prerequisites step
 
