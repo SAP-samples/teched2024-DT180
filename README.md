@@ -48,7 +48,7 @@ Note 2: The iFlows of package SAP IBP - Integration with SAP S/4HANA Cloud have 
     - [Exercise 2.2 - Use a more complex plant filter](exercises/ex2#exercise-22-use-a-more-complex-plant-filter)
     - [Exercise 2.3 - Define a field extension for plants](exercises/ex2#exercise-23-define-a-field-extension-for-plants)
 - [Exercise 3 - Configure, deploy and analyse Run Integrate Products etc...](exercises/ex3/)
-    - [Exercise 3.1 - Configure and deploy the Run Plants iFlow](exercises/ex3#exercise-31-configure-and-deploy-the-run-plants-iflow)
+    - [Exercise 3.1 - Configure and deploy the Run Products etc iFlow](exercises/ex3#exercise-31-configure-and-deploy-the-run-products-etc-iflow)
     - [Exercise 3.2 - Create only some data types in IBP](exercises/ex3#exercise-32-create-only-some-data-types-in-ibp)
     - [Exercise 3.3 - Create a datastore with selected product plant combinations](exercises/ex3#exercise-33-create-a-datastore-with-selected-product-plant-combinations)
 - [Exercise 4 - Configure, deploy and analyse Run Integrate Sales History Data...](exercises/ex4/)
