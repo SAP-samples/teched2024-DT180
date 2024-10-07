@@ -72,6 +72,6 @@ This datastore can be used later when integrating the sales order history data, 
 
 You've now learned to configure and deploy the iFlow for repilcating products etc and some of it's configuration parameters
 
-Continue to - [Exercise 4 - Exercise 4 Description](../ex4/README.md)
+Continue to - [Exercise 5 - Configure, deploy and analyse Run Integrate KFs from SAP IBP to SAP S4HANA Cloud...](../ex5/README.md)
 
 
