@@ -24,7 +24,6 @@ After completing these steps you will have uploaded all integration flows needed
 11.	Replace -your P S I D C user- by your user ID in field Name of the to be created integration flow (iFlow)
 12.	Click Add
 13.	Repeat steps 7 to 12 for the following files:
-- RunIntegrateBusinessPartnersFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip
 - RunIntegratePlantsFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip
 - RunIntegrateProductsEtcFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip
 - RunIntegrateSalesOrderHistoryFromSAPS4HANACloudToSAPIBP-yourPSIDCuser-.zip
