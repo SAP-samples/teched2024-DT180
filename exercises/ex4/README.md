@@ -6,32 +6,31 @@ In this exercise, we will modify, execute and analyse iFlow Run Integrate Sales 
 
 After completing these steps you will have modified and deployed the above mentioned iFlow.
 
-The Product, etc. iFlow is the most complex one of the provided iFlows. It is selecting not only products, but also other related data. Using the default settings not only products (master data type PRODUCT) are created in IBP, but also units of measure (UOMTO) and product specific unit of measure conversion factors (UOMCONVERSIONFACTOR)
-
-1. On the first tab open iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user- of your package Session DT180 -your own user-
+1. On the first tab open iFlow Run Integrate Sales Order History from SAP S4HANA Cloud to SAP IBP -your own user-
 2. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
-3. In Batch Name the value should be -your P S I D C user- Run Product, etc.: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
+3. In Batch Name the value should be -your P S I D C user- Sales Order History Run ID: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
 4. Change the value of Plant Filter from -keep default- to 05AA-09ZZ,1000-1999,2060,4060. This will select all plants between 05AA and 09ZZ, between 1000 and 1999, 2060 and 4060.
-4. Change the value of Product Filter from -keep default- to FG126-FG426. This will select all products between FG126 and FG426.
+4. Change the value of Product Filter from -keep default- to FG126-FG426,HT2000,FG426-FG626. This will select all products between FG126 and FG426, HT200 and between FG426 and FG626.
 5. In Datastore ID for Product Plant Filter replace -keep default- by the empty string
+6. In Date From set the following value for selecting the last two years: xsd:yearMonthDuration('-P24M') + xsd:date(substring($IFlowStartTimestamp,1,10))
 7. The rest of the configuration parameters should be left unchanged.
 8. Click Deploy on the lower right corner of the screen
 9. On the upcoming popup click Yes
-10. Switch to the second tab opened in exercise 1 and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
-11. Update the display if needed
-12. Filter by the correlation ID of the run of your iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-
-13. CLick on iFlow SAP IBP Write - Process Posted Data
-14. Custom Header IBP Write Batch File should have the following three entires:
-batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
-batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
-batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
+10. You can switch to the third tab and check when your Flow is started
+11. Switch to the second tab and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
+12. Update the display if needed until the run of your iFlow is finished
+13. Filter by the correlation ID of the new run of your iFlow Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-
+14. CLick on iFlow SAP IBP Write - Process Posted Data
+15. Custom Header IBP Write Batch File should have the following entry:
+    
+batch:..., name:Sales Order History, count:421, status:PROCESSED_WITH_ERRORS, errorCount:1
 
-## Exercise 4.2 Create only some data types in IBP
+## Exercise 4.2 Add the product plant filter
 
-After completing these steps you will be able to run the integration of products, etc. for only some master data types
+After completing these steps you will be able to run the integration of key figures only for products replicated to IBP
 
-1. On the first tab configure iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-
-2. Change configuration parameter Master Data Types from PRODUCT,UOMTO,UOMCONVERSIONFACTOR to PRODUCT,UOMTO
+1. On the first tab configure iFlow Run Integrate Sales Order History from SAP S4HANA Cloud to SAP IBP -your own user-
+2. Change configuration parameter Datastore ID for Product Plant Filter from empty string to -your own user- Product Plant FIlter
 3. Deploy the iFlow again
 4. Switch to the second tab and navigate to Monitor -> Integrations and APIs, Monitor Message Processing -> All Artifacts
 5. Update the display if needed
