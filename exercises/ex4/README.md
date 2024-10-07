@@ -58,14 +58,12 @@ After completing these steps you will be able to influence how data are replicat
 - Change configuration parameter Key Figure Name from SENSEDDEMANDQTY back to ACUTUALSQTY
 - Change configuration parameter Time Period Type in SAP S/4HANA Cloud from Date back to Technical Week
 - Change configuration parameter Time Profile Level in SAP IBP from 1 (day) back to 2 (technical week)
-- Change configuration parameter Customer Source for SAP IBP from DummyCustomerID to ShipToParty
-- Custom Header IBP Write Batch File should have the following content: batch:..., name:Sales Order History, count:2296, status:PROCESSED, errorCount:0, so more entries have been integrated to IBP, as we only aggregated by date, not by month and week.
-
-This datastore can be used later when integrating the sales order history data, so that no sales history is loaded for products that have not been created in IBP or for product plant combinations for which no planned independent requirements can be created in S/4 after the forcast has been calculated in IBP.
+- Change configuration parameter Quantity Type for SAP IBP from Requested to Confirmed (you also can choose the third possible option Delivered, this will change the content of the data sent to IBP, but not the number of entries)
+- Custom Header IBP Write Batch File should have the following content: batch:..., name:Sales Order History, count:204, status:PROCESSED, errorCount:0, so a lower amount of entries has been selected, when compared to exercise 4.2, as now the confirmed quantities by confirmation date are integrated instead of the requested quantities by requested date
 
 ## Summary
 
-You've now learned to configure and deploy the iFlow for repilcating products etc and some of it's configuration parameters
+You've now learned to configure and deploy the iFlow for replicating products etc and some of it's configuration parameters
 
 Continue to - [Exercise 5 - Configure, deploy and analyse Run Integrate KFs from SAP IBP to SAP S4HANA Cloud...](../ex5/README.md)
 
