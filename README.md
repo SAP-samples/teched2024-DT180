@@ -56,9 +56,9 @@ Note 2: The iFlows of package SAP IBP - Integration with SAP S/4HANA Cloud have 
     - [Exercise 4.2 - Add the product plant filter](exercises/ex4#exercise-42-add-the-product-plant-filter)
     - [Exercise 4.3 - Change the aggregation criteria](exercises/ex4#exercise-43-change-the-aggregation-criteria)
 - [Exercise 5 - Configure, deploy and analyse Run Integrate KFs from SAP IBP to SAP S4HANA Cloud...](exercises/ex5/)
-    - [Exercise 5.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex5#exercise-21-sub-exercise-1-description)
-    - [Exercise 5.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex5#exercise-22-sub-exercise-2-description)
-    - [Exercise 5.3 - Exercise 2 Sub Exercise 2 Description](exercises/ex5#exercise-22-sub-exercise-2-description)
+    - [Exercise 5.1 - Configure and deploy the Run KFs iFlow](exercises/ex5exercise-51-configure-and-deploy-the-run-kfs-iflow)
+    - [Exercise 5.2 - Change the time aggregation to Month](exercises/ex5#exercise-52-change-the-time-aggregation-to-month)
+    - [Exercise 5.3 - Lower the package size, so that several fetches are needed](exercises/ex5#exercise-53-lower-the-package-size-so-that-several-fetches-are-needed)
 - Get an overview on the available reusable iFlows
 - Configure the iFlow for defining default settings
 - Configure, deploy and schedule the iFlow for plant replication
