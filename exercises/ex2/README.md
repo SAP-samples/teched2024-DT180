@@ -65,5 +65,5 @@ Note Mapping cannot take a flat value, for example: “./AddressID”, give a fu
 
 You've now learned to configure and deploy the iFlow for repilcating plants and it's most important configuration parameters
 
-Continue to - [Exercise 3 - Exercise 2 Description](../ex3/README.md)
+Continue to - [Exercise 3 - Configure, deploy and analyse Run Integrate Products etc...](../ex3/README.md)
 
