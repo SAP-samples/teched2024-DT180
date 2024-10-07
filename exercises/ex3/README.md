@@ -2,7 +2,7 @@
 
 In this exercise, we will modify, execute and analyse iFlow Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your P S I D C user-
 
-## Exercise 3.1 Configure and deploy the Run Plants iFlow
+## Exercise 3.1 Configure and deploy the Run Products etc iFlow
 
 After completing these steps you will have modified and deployed the above mentioned iFlow.
 
