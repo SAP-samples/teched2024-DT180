@@ -34,7 +34,7 @@ IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P) (
 
 This will allow you to go through all the setup steps and run the whole process end to end including the steps needed in S/4 and IBP. You also will be able to check the results of the integration in the corresponding target system.
 
-Note 2: The iFlows of package SAP IBP - Integration with SAP S/4HANA Cloud have a lot of configuration parameters that influence their behavior and we will learn about some of those parameters in the exercises below. Most of the parameters also can be set as headers before calling the iFlows. This is what we mainly do in the exercises below. You own iFlows have similar configuration parameters as the main iFlows and overwrite the default values if needed. If you are uncertain about the behavior or possible values of some parameters the package SAP IBP - Integration with SAP S/4HANA Cloud contains documents describing the configuration parameters of all the contained iFlows.
+Note 2: The iFlows of package SAP IBP - Integration with SAP S/4HANA Cloud have a lot of configuration parameters that influence their behavior and we will learn about some of those parameters in the exercises below. Most of the parameters also can be set as headers before calling the iFlows. This is what we mainly do in the exercises below. You own iFlows have similar configuration parameters as the main iFlows and overwrite the default values if needed. If you are uncertain about the behavior or possible values of some parameters, the package SAP IBP - Integration with SAP S/4HANA Cloud contains documents describing the configuration parameters of all the contained iFlows, including in many cases some examples how to set them.
 
 ## Exercises
 
@@ -43,9 +43,22 @@ Note 2: The iFlows of package SAP IBP - Integration with SAP S/4HANA Cloud have 
     - [Exercise 1.1 - Configure and deploy the Run Business Partner iFlow](exercises/ex1#exercise-11-configure-and-deploy-the-run-business-partner-iflow)
     - [Exercise 1.2 - Check the logs of the first iFlow run](exercises/ex1#exercise-12-check-the-logs-of-the-first-iflow-run)
     - [Exercise 1.3 - Produce and analyse an escalation](exercises/ex1#exercise-13-produce-and-analyse-an-escalation)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 2 - Configure, deploy and analyse Run Integrate Plants...](exercises/ex2/)
+    - [Exercise 2.1 - Configure and deploy the Run Plants iFlow](exercises/ex2#exercise-21-configure-and-deploy-the-run-plants-iflow)
+    - [Exercise 2.2 - Use a more complex plant filter](exercises/ex2#exercise-22-use-a-more-complex-plant-filter)
+    - [Exercise 2.3 - Define a field extension for plants](exercises/ex2#exercise-23-define-a-field-extension-for-plants)
+- [Exercise 3 - Configure, deploy and analyse Run Integrate Products etc...](exercises/ex3/)
+    - [Exercise 3.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex3#exercise-21-sub-exercise-1-description)
+    - [Exercise 3.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex3#exercise-22-sub-exercise-2-description)
+    - [Exercise 3.3 - Exercise 2 Sub Exercise 2 Description](exercises/ex3#exercise-22-sub-exercise-2-description)
+- [Exercise 4 - Configure, deploy and analyse Run Integrate Sales History Data...](exercises/ex4/)
+    - [Exercise 4.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex4#exercise-21-sub-exercise-1-description)
+    - [Exercise 4.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex4#exercise-22-sub-exercise-2-description)
+    - [Exercise 4.3 - Exercise 2 Sub Exercise 2 Description](exercises/ex4#exercise-22-sub-exercise-2-description)
+- [Exercise 5 - Configure, deploy and analyse Run Integrate KFs from SAP IBP to SAP S4HANA Cloud...](exercises/ex5/)
+    - [Exercise 5.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex5#exercise-21-sub-exercise-1-description)
+    - [Exercise 5.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex5#exercise-22-sub-exercise-2-description)
+    - [Exercise 5.3 - Exercise 2 Sub Exercise 2 Description](exercises/ex5#exercise-22-sub-exercise-2-description)
 - Get an overview on the available reusable iFlows
 - Configure the iFlow for defining default settings
 - Configure, deploy and schedule the iFlow for plant replication
