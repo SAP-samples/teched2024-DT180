@@ -14,7 +14,7 @@ The SAP IBP solution holds a breadth of ERP information that is critical for man
 The requirements to follow the exercises in this repository are:
 - You need an SAP user (type P,S,I or D)
 - You need to register yourself in the booker app with an email that was not used for another user already: [TechEd Tenant Booker Application](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
-<br>![](/images/teched2024-DT180/blob/main/images/SessionDT180TenantBooker.gif)
+<br>![](/images/SessionDT180TenantBooker.gif)
 - If you need assistance later on in one of the steps of the exercise please provide your user ID and the tenant (both marked in red above), so that we can find your content
 - Navigate from the booker tool to the Integration Suite instance you are assigned to by clicking the corresponding link (marked in red on the snapshot above)
 - Optionally you can bookmark the opened Integration Suite url for later direct access
