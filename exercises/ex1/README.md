@@ -85,7 +85,7 @@ Note that the log level trace is activated for all users and is deactivated afte
 16. Double-click it
 17. Scroll down to `Logs`
 18. The entry `Log Level` should be a link with text `Trace`. Click on it. (If it's not Trace try again to set log level trace for this iFlow on the third tab and make sure it's the right one and redeploy your iFlow.)
-19. Click on entry `Delete body from property` in the list of `Run Steps`. This is the last step before `IBP Write - Post Data` is called via ProcessDirect
+19. Click on entry `Delete body from property` in the list of `Run Steps`. This is the last step before `IBP Write - Post Data` is called via ProcessDirect. Please note that the list of `Run Steps` is in descending chronological order (newest on top)
 20. Then click on tab `Message Content` on top
 21. Click on tab `Payload`
 
@@ -95,7 +95,7 @@ The result should look similar to this:
 Note that field `CUSTDESCR` contains string `DUMMY's description`, which contains a single quote. This is not supported in IBP. IBP cannot handle the special characters single and double quote, less than, greater than, carriage return and line feed. But there is a convenient solution to that.
 
 22. Just repeat the steps before, but use Source Value `<CUSTDESCR value="ibp:escape('DUMMY''s description')"/>` for configuration parameter `Field Extensions`
-There won't be any validation error any more and if you have a look at the trace again you will find that `CUSTDESCR` has now the value `DUMMY⨩s description`, where the `'` is replaced by a look-alike unicode character `⨩`. The replacement characters for the non-supported characters in IBP are defined in iFlow Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud in configuration parameter Escaped Quotes and can be adapted if needed.
+There won't be any validation error any more and if you have a look at the trace again you will find that `CUSTDESCR` has now the value `DUMMY⨩s description`, where the `'` is replaced by a look-alike unicode character `⨩`. The replacement characters for the non-supported characters in IBP are defined in iFlow `Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud` in configuration parameter `Escaped Quotes` and can be adapted if needed.
 
 ## Exercise 1.4 Replicate customers from S/4
 
