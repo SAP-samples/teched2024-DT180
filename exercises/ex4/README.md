@@ -21,7 +21,7 @@ After completing these steps you will have configured and deployed the above men
 12. Update the display if needed until the run of your iFlow is `Completed`
 13. Filter by the correlation ID of the new run of your iFlow `Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-`
 The following three iFlows all should have status `Escalated`: `Run Integrate Sales Order History from SAP S4HANA Cloud to SAP IBP -your own user-`, `Integrate Sales Order History Data from SAP S4HANA Cloud to SAP IBP`, `SAP IBP Write - Process Posted Data`
-15. CLick on iFlow `SAP IBP Write - Process Posted Data`
+15. Click on iFlow `SAP IBP Write - Process Posted Data`
 16. Custom Header `IBP Write Batch File` should have the following entry:
 ```
 batch:..., name:Sales Order History, count:421, status:PROCESSED_WITH_ERRORS, errorCount:1
@@ -54,7 +54,7 @@ After completing these steps you will be able to influence how data are replicat
 5. Deploy the iFlow again
 6. Check that the iFlow was started and finished successfully
 7. Filter by the correlation ID of the latest run of your iFlow if needed. All iFlows of this run should have status `Completed`
-8. CLick on iFlow `SAP IBP Write - Process Posted Data`
+8. Click on iFlow `SAP IBP Write - Process Posted Data`
 9. Custom Header `IBP Write Batch File` should have the following content:
 ```
 batch:..., name:Sales Order History, count:2296, status:PROCESSED, errorCount:0
