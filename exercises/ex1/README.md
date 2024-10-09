@@ -77,8 +77,8 @@ Now let's analyse more in detail what is the issue here.
 10. Click on it and check the Log Configuration
 11. If the `Log Level` is not `Trace` then change it to `Trace`
 
-[!NOTE]
-The log level trace is activated for all users and is deactivated after 15 minutes already. So it might be that someone else already activated the trace level for the iFlow and it also might happen quite often that it is deactivated automatically
+> [!NOTE]
+> The log level trace is activated for all users and is deactivated after 15 minutes already. So it might be that someone else already activated the trace level for the iFlow and it also might happen quite often that it is deactivated automatically
 
 12. Switch back to the first tab and deploy iFlow `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` again
 13. Switch to the third tab. As long as the status of iFlow `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` is `Starting` click the refresh button
