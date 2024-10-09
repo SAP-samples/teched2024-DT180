@@ -35,7 +35,7 @@ After completing these steps you will be able to define filters for the plant ID
 8. Switch to the second tab opened above and navigate to `Monitor -> Integrations and APIs`, `Monitor Message Processing -> All Artifacts`
 9. Update the display if needed
 10. Filter by the correlation ID of the second run of your iFlow `Run Integrate Plants from SAP S4HANA Cloud to SAP IBP -your own user-`
-11. CLick on iFlow `SAP IBP Write - Process Posted Data`
+11. Click on iFlow `SAP IBP Write - Process Posted Data`
 12. Custom Header `IBP Write Batch File` should have the following content: `batch:..., name:Plants, count:18, status:PROCESSED, errorCount:0`, so 5 more plants should have been selected and processed
 
 > [!NOTE]
