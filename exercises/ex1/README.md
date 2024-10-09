@@ -49,7 +49,8 @@ As you can see from the screenshot above there should be one entry sent to IBP a
 10. Click on artifact `Integrate Business Partners from SAP S4HANA Cloud to SAP IBP`
 You should be able to see some `Custom Headers`, at least if you scroll down, and attachment `Parameters` even further down in the list. Please click on the link of attachment `Parameters`. You should be able to see the content of that attachment. If the content is not readable, because all rows are written into the same row you can download the attachment and open it with an editor to read the content. The attachment contains the most important information about which parameters were used when processing the business iFlow `Integrate Business Partners from SAP S4HANA Cloud to SAP IBP`.
 The content of the attachment could look like this:
-```Customer Filter: 
+```
+Customer Filter: 
 Dummy Customer ID: DUMMY
 Field Extensions: 
 Attributes in SAP IBP: CUSTID,CUSTCHANNEL,CUSTCOUNTRY,CUSTDESCR,CUSTREGION
