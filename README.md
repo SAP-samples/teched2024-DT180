@@ -48,6 +48,7 @@ Note 2: The iFlows of package SAP IBP - Integration with SAP S/4HANA Cloud have 
     - [Exercise 1.1 - Configure and deploy the Run Business Partner iFlow](exercises/ex1#exercise-11-configure-and-deploy-the-run-business-partner-iflow)
     - [Exercise 1.2 - Check the logs of the first iFlow run](exercises/ex1#exercise-12-check-the-logs-of-the-first-iflow-run)
     - [Exercise 1.3 - Produce and analyse an escalation](exercises/ex1#exercise-13-produce-and-analyse-an-escalation)
+    - [Exercise 1.4 - Replicate customers from S/4](exercises/ex1#exercise-14-replicate-customers-from-s4)
 - [Exercise 2 - Configure, deploy and analyse Run Integrate Plants...](exercises/ex2/)
     - [Exercise 2.1 - Configure and deploy the Run Plants iFlow](exercises/ex2#exercise-21-configure-and-deploy-the-run-plants-iflow)
     - [Exercise 2.2 - Use a more complex plant filter](exercises/ex2#exercise-22-use-a-more-complex-plant-filter)
