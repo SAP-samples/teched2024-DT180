@@ -10,12 +10,12 @@ This session introduces attendees to the SAP Integration Suite part of the deman
 The SAP IBP solution holds a breadth of ERP information that is critical for many supply chain planning scenarios. SAP S/4HANA Cloud Public Edition stands as a system of record and is important for planning data in SAP IBP. As a result, the need for integrating SAP IBP with SAP S/4HANA is critical for customers. Learn how to setup, configure and run this integration in SAP Integration Suite using interfaces in SAP IBP to exchange volumes of data with SAP S/4HANA Cloud Public Edition.
 
 ## Change Log
-October 9th: Exercise 1.4 reworked, formatting reworked, minor corrections
+October 9^th^: Exercise 1.4 reworked, formatting reworked, minor corrections
 
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
-- The used SAP Integration Suite instances are available till October 25th End of Business UTC-2
+- The used SAP Integration Suite instances are available till October 25^th^ End of Business UTC-2
 - You need an SAP user (type P,S,I,D or C)
 - Go to [SAP Community](https://community.sap.com/) to find out if you have an SAP user or create it there.
 - You need to register yourself in the booker app with an email that was not used for another user already: [TechEd Tenant Booker Application](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
