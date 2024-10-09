@@ -8,24 +8,24 @@ After completing these steps you will have modified and deployed the above menti
 
 1. Log on to the Cloud Integration instance
 
-2. Navigate to Design -> Integrations and APIs on the left. 
+2. Navigate to `Design -> Integrations and APIs` on the left. 
 3. If there are too many entries for scrolling you can search by your user ID to shrink the list
-4. Click on your self-created package Session DT180 -your own user-
+4. Click on your self-created package `Session DT180 -your own user-`
      The details of that package should be shown
-5. Click on tab Artifacts
-6. Click on Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
+5. Click on tab `Artifacts`
+6. Click on `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-`
 
-Please note that the integration process has a main integration process with several transforms. The first one is for defining modified headers and the second one is a processDirect call of the standard iFlow for Integration of Business Partners from S/4 to IBP. It is possible to schedule the standard iFlows standalone, but they only can have one configuration. So if there is a need to run the iFlows with different configurations it is better to define wrapper iFlows, like the one you uploaded, which modify the header parameters before they call the standard iFlows. This way every user can have his own set of configuration parameters without interfering with others. Please do not change the configuration of the main iFlows in package SAP IBP - Integration with SAP S/4HANA Cloud, but only the configuration of you own wrapper iFlows. Otherwise you risk to make the main iFlows unusable for other users.
+Please note that the integration process has a main integration process with several transforms. The first one is for defining modified headers and the second one is a processDirect call of the standard iFlow for Integration of Business Partners from S/4 to IBP. It is possible to schedule the standard iFlows standalone, but they only can have one configuration. So if there is a need to run the iFlows with different configurations it is better to define wrapper iFlows, like the one you uploaded, which modify the header parameters before they call the standard iFlows. This way every user can have his own set of configuration parameters without interfering with others. Please do not change the configuration of the main iFlows in package `SAP IBP - Integration with SAP S/4HANA Cloud`, but only the configuration of you own wrapper iFlows. Otherwise you risk to make the main iFlows unusable for other users.
 <br>![](/exercises/ex1/images/SessionDT180BuPaDefineHeaders.gif)
 The rounded boxes around the source values of the headers indicate that the source values are not defined statically, but by externalized parameters, which can be configured. 
 
 8. Click Configure. A popup will be opened that shows the configurable parameters of the iFlow.
-9. In Batch Name the value should be -your P S I D C user- Run Business Partner: ${header.SAP_MplCorrelationId}, replace -your P S I D C user- by your own user ID
-10. Change the value of Dummy Customer ID from -keep default- to DUMMY
-11. Set the Customer Filter to an empty string
+9. In `Batch Name` the value should be `-your P S I D C user- Run Business Partner: ${header.SAP_MplCorrelationId}`, replace `-your P S I D C user-` by your own user ID
+10. Change the value of `Dummy Customer ID` from `-keep default-` to `DUMMY`
+11. Set the `Customer Filter` to an empty string
 12. The rest of the configuration parameters should be left unchanged.
-13. Click Deploy on the lower right corner of the screen
-16. On the upcoming popup leave the Runtime Profile Cloud Integration as is an click Yes
+13. Click `Deploy` on the lower right corner of the screen
+16. On the upcoming popup leave the Runtime Profile Cloud Integration as is an click `Yes`
 17. A popup is shown with the Deployment information 'Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP ...' is triggered for deployment.
 18. After some time there should be another temporary popup saying 'Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP ...' successfully deployed.
 
@@ -94,7 +94,7 @@ The result should look similar to this:
 
 Note that field CUSTDESCR contains string DUMMY's description, which contains a single quote. This is not supported in IBP. IBP cannot handle the special characters single and double quote, less than, greater than, carriage return and line feed. But there is a convenient solution to that.
 
-22. Just repeat the steps before, but use Source Value `&lt;CUSTDESCR value="ibp:escape('DUMMY''s description')"/>` for configuration parameter Field Extensions
+22. Just repeat the steps before, but use Source Value `<CUSTDESCR value="ibp:escape('DUMMY''s description')"/>` for configuration parameter Field Extensions
 There won't be any validation error any more and if you have a look at the trace again you will find that CUSTDESCR has now the value `DUMMY⨩s description`, where the `'` is replaced by a look-alike unicode character `⨩`. The replacement characters for the non-supported characters in IBP are defined in iFlow Define Default Values for Data Integration Between SAP IBP and SAP S4HANA Cloud in configuration parameter Escaped Quotes and can be adapted if needed.
 
 ## Exercise 1.4 Replicate customers from S/4
@@ -102,22 +102,20 @@ There won't be any validation error any more and if you have a look at the trace
 Till now we only created one dummy customer. Now we also want to replicate business partners of type customer from S/4 to IBP. To do so we need to set a filter
 1. Switch back to the first tab and navigate to the configuration of iFlow Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- 
 2. Change the Value of configuration parameter Customer Filter from the empty string to `1035161-1035164`
-3. Change the value of configuration parameter Field Extensions from `&lt;CUSTDESCR value="ibp:escape('DUMMY''s description')"/>` to `&lt;CUSTDESCR value="ibp:escape(if (./to_Customer/A_CustomerType/BPCustomerFullName) then ./to_Customer/A_CustomerType/BPCustomerFullName else 'DUMMY''s description')"/>`
+3. Change the value of configuration parameter Field Extensions from `<CUSTDESCR value="ibp:escape('DUMMY''s description')"/>` to `<CUSTDESCR value="ibp:escape(if (./to_Customer/A_CustomerType/BPCustomerFullName) then ./to_Customer/A_CustomerType/BPCustomerFullName else 'DUMMY''s description')"/>`
 4. Deploy the iFlow again
 5. Switch back to the second tab and navigate to Monitor Message Processing again
 6. Find the latest entry of Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-
 7. Filter by the correlation ID of this new run as described in exercise 1.2. All iFlows should have status Completed
 8. Switch back to the first tab and deploy iFlow Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- again
-9. Switch to the third tab. As long as the status of iFlow Basic Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- is starting click the refresh button
-10. On the second tab and refresh the list there until the latest run of Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user- is Completed
+9. Switch to the third tab. As long as the status of iFlow `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` is starting click the refresh button
+10. On the second tab and refresh the list there until the latest run of `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` is Completed
 11. Find the corresponding run of iFlow `Integrate Business Partners from SAP S4HANA Cloud to SAP IBP` and navigate to the trace log. If the log level is not Trace activate the trace again on the third tab and repeat steps 8 to 11.
-12. Click on entry Delete body from property in the list of run steps. This is the last step before IBP Write - Post Data is called via ProcessDirect
+12. Click on entry Delete body from property in the list of run steps. This is the last step before `IBP Write - Post Data` is called via ProcessDirect
 13. Then click on tab Message Content on top
 14. Click on tab Payload
 
-You should see five items with CUSTID `1035161`, `1035162`, `1035163`, `1035164` and `DUMMY` and different values in CUSTDESCR
-
-Note that field CUSTDESCR contains string DUMMY's description, which contains a single quote. This is not supported in IBP. IBP cannot handle the special characters single and double quote, less than, greater than, carriage return and line feed. But there is a convenient solution to that.
+You should see five items with CUSTID equal to `1035161`, `1035162`, `1035163`, `1035164` and `DUMMY` and different values in CUSTDESCR
 
 ## Summary
 
