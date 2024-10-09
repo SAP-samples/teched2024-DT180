@@ -66,7 +66,7 @@ After completing these steps you will be able to define a field extension for pl
 
 ## Summary
 
-You've now learned to configure and deploy the iFlow for repilcating plants and it's most important configuration parameters
+You've now learned to configure and deploy the iFlow for replicating plants and it's most important configuration parameters
 
 Continue to - [Exercise 3 - Configure, deploy and analyse Run Integrate Products etc...](../ex3/README.md)
 
