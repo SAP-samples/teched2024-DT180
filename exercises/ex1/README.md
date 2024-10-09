@@ -44,8 +44,9 @@ Note: The iFlow is set up in a way that it is triggered once after every new dep
 8. Click on Artifact Name `SAP IBP Write - Process Posted Data`
 The screen should look similar to this one:
 <br>![](/exercises/ex1/images/SessionDT180IBPWriteProcessPostedData.gif)
-Note 1: As you can see from the screenshot above there should be one entry sent to IBP and processed successfully there. The reason for that is that we have defined a `Dummy Customer ID`, but we set `Customer Filter` to an empty string. This way we only creaded a dummy customer in IBP, but we did not replicate customers from S/4 to IBP, which is only triggered if a filter is defined in `Customer Fliter`. This is why the delivered default value of that field is `0-ZZZ`, which means all customers with an ID that is alphabetically between `0` and `ZZZ` are replicated from S/4 to IBP.
-9. Click on artifact `Integrate Business Partners from SAP S4HANA Cloud to SAP IBP`
+[!NOTE]
+As you can see from the screenshot above there should be one entry sent to IBP and processed successfully there. The reason for that is that we have defined a `Dummy Customer ID`, but we set `Customer Filter` to an empty string. This way we only creaded a dummy customer in IBP, but we did not replicate customers from S/4 to IBP, which is only triggered if a filter is defined in `Customer Fliter`. This is why the delivered default value of that field is `0-ZZZ`, which means all customers with an ID that is alphabetically between `0` and `ZZZ` are replicated from S/4 to IBP.
+10. Click on artifact `Integrate Business Partners from SAP S4HANA Cloud to SAP IBP`
 You should be able to see some `Custom Headers`, at least if you scroll down, and attachment `Parameters` even further down in the list. Please click on the link of attachment `Parameters`. You should be able to see the content of that attachment. If the content is not readable, because all rows are written into the same row you can download the attachment and open it with an editor to read the content. The attachment contains the most important information about which parameters were used when processing the business iFlow `Integrate Business Partners from SAP S4HANA Cloud to SAP IBP`.
 The content of the attachment could look like this:
 ```Customer Filter: 
@@ -76,7 +77,8 @@ Now let's analyse more in detail what is the issue here.
 10. Click on it and check the Log Configuration
 11. If the `Log Level` is not `Trace` then change it to `Trace`
 
-Note that the log level trace is activated for all users and is deactivated after 15 minutes already. So it might be that someone else already activated the trace level for the iFlow and it also might happen quite often that it is deactivated automatically
+[!NOTE]
+The log level trace is activated for all users and is deactivated after 15 minutes already. So it might be that someone else already activated the trace level for the iFlow and it also might happen quite often that it is deactivated automatically
 
 12. Switch back to the first tab and deploy iFlow `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` again
 13. Switch to the third tab. As long as the status of iFlow `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` is `Starting` click the refresh button
