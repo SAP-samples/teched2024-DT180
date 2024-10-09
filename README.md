@@ -67,17 +67,6 @@ This will allow you to go through all the setup steps and run the whole process 
     - [Exercise 5.1 - Configure and deploy the Run KFs iFlow](exercises/ex5exercise-51-configure-and-deploy-the-run-kfs-iflow)
     - [Exercise 5.2 - Change the time aggregation to Month](exercises/ex5#exercise-52-change-the-time-aggregation-to-month)
     - [Exercise 5.3 - Lower the package size, so that several fetches are needed](exercises/ex5#exercise-53-lower-the-package-size-so-that-several-fetches-are-needed)
-- Get an overview on the available reusable iFlows
-- Configure the iFlow for defining default settings
-- Configure, deploy and schedule the iFlow for plant replication
-- Analyse the error log
-- Change the configuration concerning filtering by plant
-- Create and deploy a wrapper iFlow calling the plant iFlow with deviating settings
-  
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
