@@ -55,8 +55,8 @@ Attributes in SAP IBP: CUSTID,CUSTCHANNEL,CUSTCOUNTRY,CUSTDESCR,CUSTREGION
 Further Filters: 
 Host for SAP S4/HANA Cloud: ...-api.s4hana.ondemand.com
 Master Data Prefix: T24
-OData Package Size: 50000```
-
+OData Package Size: 50000
+```
 ## Exercise 1.3 Produce and analyse an escalation
 
 1. Switch back to the first tab and navigate to the configuration of iFlow `Run Integrate Business Partners from SAP S4HANA Cloud to SAP IBP -your own user-` as described in exercise 1.1 above
