@@ -22,7 +22,8 @@ The Product, etc. iFlow is the most complex one of the provided iFlows. It is se
 12. Filter by the correlation ID of the run of your iFlow `Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-`
 13. CLick on iFlow `SAP IBP Write - Process Posted Data`
 14. Custom Header `IBP Write Batch File` should have the following three entires:
-```batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
+```
+batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
 batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
 batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
 ```
@@ -38,12 +39,14 @@ After completing these steps you will be able to run the integration of products
 6. Filter by the correlation ID of the latest run of your iFlow `Run Integrate Products etc from SAP S4HANA Cloud to SAP IBP -your own user-`
 7. CLick on iFlow `SAP IBP Write - Process Posted Data`
 8. Custom Header IBP Write Batch File should have the following two entires:
-```batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
+```
+batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
 batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
 ```
 9. Repeat steps 1 t 9 above, but Change configuration parameter Master Data Types to UOMCONVERSIONFACTOR
 14. Custom Header `IBP Write Batch File` should have the followingentry:
-```batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
+```
+batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
 ```
 ## Exercise 3.3 Create a datastore with selected product plant combinations
 
