@@ -62,7 +62,7 @@ After completing these steps you will be able to define a field extension for pl
 15. If you have the needed authorization you should be able to see the content of the data that are sent to IBP and you should see that some entries have value `EMEA` in variable `LOCREGION`, while others have value `Americas`. There should also be a comment before the items: `<!--custom fields: LOCREGION-->` It is indicating that field `LOCREGION` has been modified by custom logic
 
 > [!NOTE]
-> The content of attribute `value` cannot consist of a field path only: `value ="./AddressID"` is not allowed, give a function instead like `value ="string(./AddressID)"`, `value ="ibp:escape(./AddressID)"` or `value ="concat('',./AddressID)"` 
+> The content of attribute `value` cannot consist of a field path only: `value ="./AddressID"` is not allowed, give a function instead like `value ="string(./AddressID)"`, `value ="ibp:escape(./AddressID)"` or `value ="concat('',./AddressID)"`, for numeric values you can use `value ="number(./Quantity)"` 
 
 ## Summary
 
