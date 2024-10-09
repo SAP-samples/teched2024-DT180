@@ -9,11 +9,15 @@ This repository contains the material for the SAP TechEd 2024 session called DT1
 This session introduces attendees to the SAP Integration Suite part of the demand planning integration between SAP S/4HANA Cloud Public Edition and SAP Integrated Business Planning for Supply Chain (SAP IBP).
 The SAP IBP solution holds a breadth of ERP information that is critical for many supply chain planning scenarios. SAP S/4HANA Cloud Public Edition stands as a system of record and is important for planning data in SAP IBP. As a result, the need for integrating SAP IBP with SAP S/4HANA is critical for customers. Learn how to setup, configure and run this integration in SAP Integration Suite using interfaces in SAP IBP to exchange volumes of data with SAP S/4HANA Cloud Public Edition.
 
+## Change Log
+October 9th: Exercise 1.4 reworked, formatting reworked, minor corrections
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
+- The used SAP Integration Suite instances are available till October 25th End of Business UTC-2
 - You need an SAP user (type P,S,I,D or C)
-- Go to https://community.sap.com/ to find out if you have one or create it there.
+- Go to [SAP Community](https://community.sap.com/) to find out if you have an SAP user or create it there.
 - You need to register yourself in the booker app with an email that was not used for another user already: [TechEd Tenant Booker Application](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
 <br>![](/images/SessionDT180TenantBooker.gif)
 - If you need assistance later on in one of the steps of the exercise please provide your user ID and the tenant (both marked in red above), so that we can find your content
