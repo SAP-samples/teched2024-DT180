@@ -44,7 +44,7 @@ batch:..., name:UomTo, count:4, status:PROCESSED, errorCount:0
 batch:..., name:Product, count:11, status:PROCESSED, errorCount:0
 ```
 9. Repeat steps 1 t 9 above, but Change configuration parameter Master Data Types to UOMCONVERSIONFACTOR
-14. Custom Header `IBP Write Batch File` should have the followingentry:
+14. Custom Header `IBP Write Batch File` should have the following entry:
 ```
 batch:..., name:UomConversionFactor, count:31, status:PROCESSED, errorCount:0
 ```
