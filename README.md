@@ -35,10 +35,8 @@ The requirements to follow the exercises in this repository are:
 > [!NOTE]
 > Please be aware that you are only allowed to access the SAP Integration Suite in these exercises. There are an S/4 and an IBP system connected and data can be transfered from S/4 to IBP, but you won't be able to access the S/4 and IBP systems. The back integration from IBP to S/4 is also possible.
 If you have test systems of type Integration Suite, S/4HANA Cloud Public Edition and SAP Integrated Buisiness Planning for Supply Chain available and the needed authorizations in both systems to setup the communication you can follow the description in Best Practice Content 
-
-[IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P)](https://me.sap.com/processnavigator/SolS/EARL_SolS-034/2408/SolP/78P)
-
-This will allow you to go through all the setup steps and run the whole process end to end including the steps needed in S/4 and IBP. You also will be able to check the results of the integration in the corresponding target system.
+> [IBP for demand – demand forecast for SAP S/4HANA Cloud, public edition (78P)](https://me.sap.com/processnavigator/SolS/EARL_SolS-034/2408/SolP/78P)
+>This will allow you to go through all the setup steps and run the whole process end to end including the steps needed in S/4 and IBP. You also will be able to check the results of the integration in the corresponding target system.
 
 > [!NOTE]
 > The iFlows of package `SAP IBP - Integration with SAP S/4HANA Cloud` have a lot of configuration parameters that influence their behavior and we will learn about some of those parameters in the exercises below. Most of the parameters also can be set as headers before calling the iFlows. This is what we mainly do in the exercises below. You own iFlows have similar configuration parameters as the main iFlows and overwrite the default values if needed. If you are uncertain about the behavior or possible values of some parameters, the package `SAP IBP - Integration with SAP S/4HANA Cloud` contains documents describing the configuration parameters of all the contained iFlows, including in many cases some examples how to set them.
